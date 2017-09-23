@@ -16,11 +16,6 @@ public class MainRestController {
 	@Autowired
 	private LmsService lmsService;
 	
-	@GetMapping(value="/")
-	public String hello() {
-		return "Hello World!";
-	}
-	
 	@GetMapping("/findAllBooks")
 	public Collection<Book> getAllBooks(){
 		return lmsService.findAllBooks();
